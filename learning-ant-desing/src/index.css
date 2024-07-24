@@ -6,6 +6,18 @@
 
 body {
     background-color: #222;
-    color: white;
+    color: white !important;
     font-family: sans-serif;
+    height: 300vh;
+}
+
+.ant-float-btn-group-wrap {
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.white-text {
+    color: white !important;
 }

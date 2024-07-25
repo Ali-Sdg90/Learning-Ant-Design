@@ -27,6 +27,7 @@ const ADButton = () => {
                 shape="round"
                 type="primary"
                 onClick={() => setBtn1((prevState) => !prevState)}
+                style={{marginTop: 20}}
             >
                 {btn1 ? "Aloha" : "Hello"}
             </Button>

@@ -1,0 +1,16 @@
+.container {
+    background-color: #333;
+    color: white !important;
+    font-family: sans-serif;
+    min-height: 300vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+
+    .ant-float-btn-group-wrap {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Learning-Ant-Design-/static/css/main.6a0f1d4b.css",
+    "main.js": "/Learning-Ant-Design-/static/js/main.bd784d88.js",
+    "index.html": "/Learning-Ant-Design-/index.html",
+    "main.6a0f1d4b.css.map": "/Learning-Ant-Design-/static/css/main.6a0f1d4b.css.map",
+    "main.bd784d88.js.map": "/Learning-Ant-Design-/static/js/main.bd784d88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a0f1d4b.css",
+    "static/js/main.bd784d88.js"
+  ]
+}

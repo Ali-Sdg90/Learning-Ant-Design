@@ -5,6 +5,10 @@ import ADTypography from "../components/ADTypography";
 import ADDivider from "../components/ADDivider";
 import ADFlex from "../components/ADFlex";
 import ADGrid from "../components/ADGrid";
+import ADLayout from "../components/ADLayout";
+import ADLayout1 from "../components/examples/ADLayout1";
+import MyLayout1 from "../components/examples/MyLayout1";
+import MyLayout2 from "../components/examples/MyLayout2";
 
 const Playground = () => {
     return (
@@ -16,6 +20,10 @@ const Playground = () => {
             <ADFlex />
             <ADDivider />
             <ADGrid />
+            <ADLayout />
+            <ADLayout1 />
+            <MyLayout1 />
+            <MyLayout2 />
         </div>
     );
 };

@@ -4,7 +4,7 @@ import {
     DownOutlined,
     GroupOutlined,
 } from "@ant-design/icons";
-import { Button, Dropdown, Flex } from "antd";
+import { Button, Dropdown, Flex, message } from "antd";
 import React, { useEffect, useState } from "react";
 
 const ADDropdown = () => {
@@ -17,26 +17,18 @@ const ADDropdown = () => {
         }
     };
 
-    // const randomLoading = () => {
-    //     let isLoading = true;
-    //     setInterval(() => {
-    //         isLoading = !!Math.floor(Math.random() * 2);
-
-    //         console.log(isLoading);
-    //     }, 200);
-
-    //     return isLoading;
-    // };
-
     useEffect(() => {
         const interval = setInterval(() => {
             const loadingState = !!Math.floor(Math.random() * 2);
-
             setIsLoading(loadingState);
         }, 1000);
 
         return () => clearInterval(interval);
     }, []);
+
+    const handleMenuClick = (e) => {
+        console.log(e.key);
+    };
 
     const menuItems = [
         {
@@ -96,14 +88,14 @@ const ADDropdown = () => {
                 <Dropdown
                     placement="topLeft"
                     arrow
-                    menu={{ items: menuItems }}
+                    menu={{ items: menuItems, onClick: handleMenuClick }}
                     trigger={["hover"]}
                 >
                     <Button icon={<DownOutlined />}>Hover me</Button>
                 </Dropdown>
 
                 <Dropdown.Button
-                    menu={{ items: menuItems }}
+                    menu={{ items: menuItems, onClick: handleMenuClick }}
                     arrow
                     placement="topRight"
                     style={{ width: "auto" }}
@@ -113,6 +105,55 @@ const ADDropdown = () => {
                 >
                     {"<Dropdown.Button>"}
                 </Dropdown.Button>
+
+                <Dropdown
+                    menu={{
+                        items: [
+                            {
+                                key: "1",
+                                label: "Hello :)",
+                            },
+                            {
+                                key: "2",
+                                label: "Today's Date",
+                                children: [
+                                    {
+                                        key: "21",
+                                        label: "1403-05-08",
+                                    },
+                                    {
+                                        key: "22",
+                                        label: "12:39 AM",
+                                    },
+                                ],
+                            },
+                            {
+                                key: "3",
+                                label: "Note to Yourself",
+                                children: [
+                                    { key: "31", label: "Drink Water :)" },
+                                ],
+                            },
+                        ],
+                        onClick: handleMenuClick,
+                    }}
+                    trigger={["contextMenu"]}
+                >
+                    <div
+                        style={{
+                            border: "1px solid gray",
+                            background: "#222",
+                            width: 400,
+                            height: 200,
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            borderRadius: 8,
+                        }}
+                    >
+                        Right Click Here!
+                    </div>
+                </Dropdown>
             </Flex>
         </div>
     );

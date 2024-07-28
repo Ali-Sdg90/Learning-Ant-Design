@@ -14,6 +14,8 @@ import ADTitle from "../../components/ADTitle";
 import { ConfigProvider, theme } from "antd";
 
 import Style from "./Playground.module.scss";
+import ADDropdown from "../../components/ADDropdown";
+import MyDropdown1 from "../../components/examples/MyDropdown1";
 
 const Playground = () => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
@@ -42,6 +44,8 @@ const Playground = () => {
                 <MyLayout1 />
                 <MyLayout2 />
                 <ADSpace />
+                <ADDropdown />
+                <MyDropdown1 />
             </ConfigProvider>
         </div>
     );

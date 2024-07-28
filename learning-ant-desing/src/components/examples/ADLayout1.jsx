@@ -19,7 +19,7 @@ const ADLayout1 = () => {
     } = theme.useToken();
 
     return (
-        <Layout style={{margin: "20px auto", width: 1200}}>
+        <Layout style={{margin: "20px auto", width: "100%"}}>
             <Sider trigger={null} collapsible collapsed={collapsed} collapsedWidth={50}>
                 <div className="demo-logo-vertical" />
                 <Menu

@@ -1,10 +1,10 @@
 import React from "react";
 import Style from "./Homepage.module.scss";
 import { ConfigProvider, Layout } from "antd";
-import Header from "../../components/Homepage/Header/Header";
-import Footer from "../../components/Homepage/Footer/Footer";
-import Sider from "../../components/Homepage/Sider/Sider";
-import Content from "../../components/Homepage/Content/Content";
+import Header from "../../components/Homepage/Header";
+import Footer from "../../components/Homepage/Footer";
+import Sider from "../../components/Homepage/Sider";
+import Content from "../../components/Homepage/Content";
 
 const {
     Header: AntHeader,
@@ -14,9 +14,16 @@ const {
 } = Layout;
 
 const Homepage = () => {
+    const theme = {
+        token: {
+            fontFamily:
+                'IRANYekanFN, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+        },
+    };
+
     return (
         <div className={Style.container}>
-            <ConfigProvider direction={"rtl"}>
+            <ConfigProvider direction={"rtl"} theme={theme}>
                 <Layout>
                     <AntSider>
                         <Sider />

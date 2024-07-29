@@ -1,9 +1,8 @@
 import React from "react";
-import Style from "./Content.module.scss";
 
 const Content = () => {
     return (
-        <div className={Style.container}>
+        <div>
             <h1>Content</h1>
         </div>
     );

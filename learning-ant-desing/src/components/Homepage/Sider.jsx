@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Layout, Menu } from "antd";
 import { ReactComponent as AlertOctagon } from "../../assets/images/homepage/sider/Alert - Octagon (1).svg";
 import { ReactComponent as MainLogo } from "../../assets/images/homepage/sider/main-logo.svg";
@@ -12,12 +12,11 @@ import { ReactComponent as Smartphone } from "../../assets/images/homepage/sider
 import { ReactComponent as Tag } from "../../assets/images/homepage/sider/Tag - 2 (2).svg";
 import { ReactComponent as UserEdit } from "../../assets/images/homepage/sider/User - Edit (1).svg";
 import { ReactComponent as Users } from "../../assets/images/homepage/sider/Users (1).svg";
+import Content from "./Content";
 
-const { Sider, Content } = Layout;
+const { Sider } = Layout;
 
-const SiderComponent = () => {
-    const [collapsed, setCollapsed] = useState(true);
-
+const SiderComponent = ({ collapsed, setCollapsed }) => {
     const items = [
         { key: "1", label: "صفحه اصلی", icon: <Home /> },
         { key: "2", label: "لیست مجموعه‌ها", icon: <Cutlery /> },
@@ -46,18 +45,16 @@ const SiderComponent = () => {
                 trigger={null}
             >
                 <div className="admin-panel">
-                    <MainLogo className="admin-panel-icon"/>
+                    <MainLogo className="admin-panel-icon" />
                     <div>پنل مدیریت</div>
                 </div>
                 <Menu items={items} theme="light" mode="inline" />
             </Sider>
-            <Layout>
-                <Content>
-                    <button onClick={() => setCollapsed(!collapsed)}>
-                        Toggle Collapse
-                    </button>
-                </Content>
-            </Layout>
+            {/* <Layout>
+                <button onClick={() => setCollapsed(!collapsed)}>
+                    Toggle Collapse
+                </button>
+            </Layout> */}
         </Layout>
     );
 };

@@ -1,0 +1,8 @@
+.main-layout {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+:where(.css-dev-only-do-not-override-qk1e4g).ant-layout {
+    flex: 1 !important;
+}

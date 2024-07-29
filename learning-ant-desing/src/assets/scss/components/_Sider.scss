@@ -1,44 +1,51 @@
-.ant-layout-sider-children {
-    background-color: #5d6af2 !important;
+.ant-layout-sider {
+    // flex: none !important;
+    // // max-width: 20 !important;
+    // min-width: 0 !important;
+    // width: fit-content !important;
 
-    .ant-menu {
+    .ant-layout-sider-children {
         background-color: #5d6af2 !important;
 
-        .ant-menu-item {
-            border-radius: 0 !important;
-            margin: 0 !important;
-            padding-left: 4px !important;
-            border-bottom: 1px solid #313e53 !important;
-            width: 100% !important;
-            height: 60px !important;
-            transition: background-color 0.15s !important;
+        .ant-menu {
+            background-color: #5d6af2 !important;
 
-            .ant-menu-item-icon {
-                transition: none !important;
+            .ant-menu-item {
+                border-radius: 0 !important;
+                margin: 0 !important;
+                padding-left: 4px !important;
+                border-bottom: 1px solid #313e53 !important;
+                width: 100% !important;
+                height: 60px !important;
+                transition: background-color 0.15s !important;
+
+                .ant-menu-item-icon {
+                    transition: none !important;
+                }
+
+                .ant-menu-title-content {
+                    color: #fff !important;
+                    font-size: 16px !important;
+                    font-style: normal !important;
+                    font-weight: 400 !important;
+                    line-height: normal !important;
+                    transition: none !important;
+                }
+
+                &:active {
+                    background-color: #3847eb !important;
+                }
             }
 
-            .ant-menu-title-content {
-                color: #fff !important;
-                font-size: 16px !important;
-                font-style: normal !important;
-                font-weight: 400 !important;
-                line-height: normal !important;
-                transition: none !important;
-            }
-
-            &:active {
+            .ant-menu-item-selected {
                 background-color: #3847eb !important;
             }
-        }
 
-        .ant-menu-item-selected {
-            background-color: #3847eb !important;
-        }
-
-        .ant-menu-item-divider {
-            background-color: #313e53;
-            height: 16px;
-            margin: 0;
+            .ant-menu-item-divider {
+                background-color: #313e53;
+                height: 16px;
+                margin: 0;
+            }
         }
     }
 }

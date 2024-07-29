@@ -1,13 +1,35 @@
 {
   "files": {
-    "main.css": "/Learning-Ant-Design-/static/css/main.6a0f1d4b.css",
-    "main.js": "/Learning-Ant-Design-/static/js/main.bd784d88.js",
+    "main.css": "/Learning-Ant-Design-/static/css/main.66eaadbf.css",
+    "main.js": "/Learning-Ant-Design-/static/js/main.df5bc3ba.js",
+    "static/media/IRANYekanFN-Thin.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Thin.8848d9cd79e7afcc6afe.ttf",
+    "static/media/IRANYekanFN-Light.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Light.69e0283b3565ef71d7c7.ttf",
+    "static/media/IRANYekanFN.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN.c60f52a9c7ded0f426e5.ttf",
+    "static/media/IRANYekanFN-Medium.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Medium.007b49e993db13942de5.ttf",
+    "static/media/IRANYekanFN-ExtraBold.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-ExtraBold.163c5c7ff5721eefa766.ttf",
+    "static/media/IRANYekanFN-Bold.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Bold.2e024cad6c04465db87c.ttf",
+    "static/media/IRANYekanFN-Black.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Black.fbfa0aeb0b19e3f92114.ttf",
+    "static/media/User - Edit (1).svg": "/Learning-Ant-Design-/static/media/User - Edit (1).2f7680bfa6f76bff86f2f7e506f81ca9.svg",
+    "static/media/Note - Text (1).svg": "/Learning-Ant-Design-/static/media/Note - Text (1).97e2780d4e9ad06b2b8bb900549bd67a.svg",
+    "static/media/Tag - 2 (2).svg": "/Learning-Ant-Design-/static/media/Tag - 2 (2).de5b341c7d6c7ac8187d751446e696fc.svg",
+    "static/media/main-logo.svg": "/Learning-Ant-Design-/static/media/main-logo.badf4ad75c217094206789d1d38b170e.svg",
+    "static/media/Home.svg": "/Learning-Ant-Design-/static/media/Home.01cfafb06e6a299874ad155ca118baa4.svg",
+    "static/media/Credit Card (2).svg": "/Learning-Ant-Design-/static/media/Credit Card (2).4691cbf5cf601da31f99a20f87c7381d.svg",
+    "static/media/Smartphone (1).svg": "/Learning-Ant-Design-/static/media/Smartphone (1).efdd56c491fb3c387415dba6da8575db.svg",
+    "static/media/Comment - Text (2).svg": "/Learning-Ant-Design-/static/media/Comment - Text (2).91ff32fb809289d64f2beab2187f35a9.svg",
+    "static/media/cutlery 2.svg": "/Learning-Ant-Design-/static/media/cutlery 2.7c961a2517a262101ada9a41db257924.svg",
+    "static/media/chef's hat.svg": "/Learning-Ant-Design-/static/media/chef's hat.e0a2753b5bb70f7f2ddecc819a562ae2.svg",
+    "static/media/Users (1).svg": "/Learning-Ant-Design-/static/media/Users (1).3e82682477adf5e52b14ba04af794fcb.svg",
+    "static/media/Alert - Octagon (1).svg": "/Learning-Ant-Design-/static/media/Alert - Octagon (1).7ec06221fbe74ddeb85c59db61d70052.svg",
     "index.html": "/Learning-Ant-Design-/index.html",
-    "main.6a0f1d4b.css.map": "/Learning-Ant-Design-/static/css/main.6a0f1d4b.css.map",
-    "main.bd784d88.js.map": "/Learning-Ant-Design-/static/js/main.bd784d88.js.map"
+    "static/media/Menu (1).svg": "/Learning-Ant-Design-/static/media/Menu (1).815953926e80021670c84500d6b20d73.svg",
+    "static/media/Chevron - Down (1).svg": "/Learning-Ant-Design-/static/media/Chevron - Down (1).6e156f5a5dc8ad5e9808bc43a4230d3f.svg",
+    "static/media/Ellipse 2.svg": "/Learning-Ant-Design-/static/media/Ellipse 2.4817808143b5a825f5ff79b6945fef8e.svg",
+    "main.66eaadbf.css.map": "/Learning-Ant-Design-/static/css/main.66eaadbf.css.map",
+    "main.df5bc3ba.js.map": "/Learning-Ant-Design-/static/js/main.df5bc3ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a0f1d4b.css",
-    "static/js/main.bd784d88.js"
+    "static/css/main.66eaadbf.css",
+    "static/js/main.df5bc3ba.js"
   ]
 }

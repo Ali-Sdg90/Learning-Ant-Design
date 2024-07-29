@@ -1,22 +1,23 @@
 import React, { useState } from "react";
-import ADButton from "../../components/ADButton";
-import ADFloatButton from "../../components/ADFloatButton";
-import ADTypography from "../../components/ADTypography";
-import ADDivider from "../../components/ADDivider";
-import ADFlex from "../../components/ADFlex";
-import ADGrid from "../../components/ADGrid";
-import ADLayout from "../../components/ADLayout";
-import ADLayout1 from "../../components/examples/ADLayout1";
-import MyLayout1 from "../../components/examples/MyLayout1";
-import MyLayout2 from "../../components/examples/MyLayout2";
-import ADSpace from "../../components/ADSpace";
-import ADTitle from "../../components/ADTitle";
+import ADButton from "../../components/Playground/ADButton";
+import ADFloatButton from "../../components/Playground/ADFloatButton";
+import ADTypography from "../../components/Playground/ADTypography";
+import ADDivider from "../../components/Playground/ADDivider";
+import ADFlex from "../../components/Playground/ADFlex";
+import ADGrid from "../../components/Playground/ADGrid";
+import ADLayout from "../../components/Playground/ADLayout";
+import ADLayout1 from "../../components/Playground/examples/ADLayout1";
+import MyLayout1 from "../../components/Playground/examples/MyLayout1";
+import MyLayout2 from "../../components/Playground/examples/MyLayout2";
+import ADSpace from "../../components/Playground/ADSpace";
+import ADTitle from "../../components/Playground/ADTitle";
 import { ConfigProvider, theme } from "antd";
 
 import Style from "./Playground.module.scss";
-import ADDropdown from "../../components/ADDropdown";
-import MyDropdown1 from "../../components/examples/MyDropdown1";
-import ADMenu from "../../components/ADMenu";
+import ADDropdown from "../../components/Playground/ADDropdown";
+import MyDropdown1 from "../../components/Playground/examples/MyDropdown1";
+import ADMenu from "../../components/Playground/ADMenu";
+import ADGotoHomepage from "../../components/Playground/ADGotoHomepage";
 
 const Playground = () => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
@@ -33,6 +34,7 @@ const Playground = () => {
                     isDarkMode={isDarkMode}
                     setIsDarkMode={setIsDarkMode}
                 />
+                <ADGotoHomepage />
                 <ADButton />
                 <ADFloatButton />
                 <ADTypography />
@@ -48,6 +50,7 @@ const Playground = () => {
                 <ADDropdown />
                 <MyDropdown1 />
                 <ADMenu />
+                <ADGotoHomepage />
             </ConfigProvider>
         </div>
     );

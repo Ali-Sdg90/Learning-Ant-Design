@@ -122,14 +122,14 @@ const ADMenu = () => {
             <Menu
                 items={inlineItems}
                 theme="dark"
-                style={{ width: 300 }}
+                style={{ width: 300, margin: "auto" }}
                 mode="inline"
                 onClick={handleClick}
             />
             <Menu
                 items={verticalItems}
                 theme="dark"
-                style={{ width: 300 }}
+                style={{ width: 300, margin: "auto" }}
                 mode="vertical"
                 onClick={handleClick}
             />

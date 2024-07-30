@@ -12,7 +12,6 @@ import { ReactComponent as Smartphone } from "../../assets/images/homepage/sider
 import { ReactComponent as Tag } from "../../assets/images/homepage/sider/Tag - 2 (2).svg";
 import { ReactComponent as UserEdit } from "../../assets/images/homepage/sider/User - Edit (1).svg";
 import { ReactComponent as Users } from "../../assets/images/homepage/sider/Users (1).svg";
-import Content from "./Content";
 
 const { Sider } = Layout;
 

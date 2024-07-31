@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Learning-Ant-Design-/static/css/main.66eaadbf.css",
-    "main.js": "/Learning-Ant-Design-/static/js/main.df5bc3ba.js",
+    "main.css": "/Learning-Ant-Design-/static/css/main.90fc3944.css",
+    "main.js": "/Learning-Ant-Design-/static/js/main.25c24a29.js",
     "static/media/IRANYekanFN-Thin.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Thin.8848d9cd79e7afcc6afe.ttf",
     "static/media/IRANYekanFN-Light.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN-Light.69e0283b3565ef71d7c7.ttf",
     "static/media/IRANYekanFN.ttf": "/Learning-Ant-Design-/static/media/IRANYekanFN.c60f52a9c7ded0f426e5.ttf",
@@ -25,11 +25,11 @@
     "static/media/Menu (1).svg": "/Learning-Ant-Design-/static/media/Menu (1).815953926e80021670c84500d6b20d73.svg",
     "static/media/Chevron - Down (1).svg": "/Learning-Ant-Design-/static/media/Chevron - Down (1).6e156f5a5dc8ad5e9808bc43a4230d3f.svg",
     "static/media/Ellipse 2.svg": "/Learning-Ant-Design-/static/media/Ellipse 2.4817808143b5a825f5ff79b6945fef8e.svg",
-    "main.66eaadbf.css.map": "/Learning-Ant-Design-/static/css/main.66eaadbf.css.map",
-    "main.df5bc3ba.js.map": "/Learning-Ant-Design-/static/js/main.df5bc3ba.js.map"
+    "main.90fc3944.css.map": "/Learning-Ant-Design-/static/css/main.90fc3944.css.map",
+    "main.25c24a29.js.map": "/Learning-Ant-Design-/static/js/main.25c24a29.js.map"
   },
   "entrypoints": [
-    "static/css/main.66eaadbf.css",
-    "static/js/main.df5bc3ba.js"
+    "static/css/main.90fc3944.css",
+    "static/js/main.25c24a29.js"
   ]
 }

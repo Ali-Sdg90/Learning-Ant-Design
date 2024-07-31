@@ -4,3 +4,99 @@
     background: #d9d9d9;
     border-radius: 50%;
 }
+
+.content {
+    padding: 29px 31px 19px;
+    background-color: #ebedef;
+
+    .ant-card-head {
+        display: block;
+        border: none !important;
+
+        .ant-card-head-title {
+            color: #000;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding: 24px 0 8px;
+        }
+    }
+
+    .quick-access-section {
+        .ant-card-body {
+            padding-bottom: 27px;
+
+            .ant-card-body {
+                padding: 14px 8px 10px 16px !important;
+            }
+
+            .quick-access-btns {
+                cursor: pointer;
+                transition: transform 0.15s;
+
+                .ant-flex {
+                    height: 100%;
+                }
+
+                .btn-title {
+                    color: #000;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                .btn-amount {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                &:hover {
+                    transform: scale(1.01);
+                }
+                &:active {
+                    transform: scale(1);
+                }
+            }
+
+            .quick-access-1 {
+                border: 1px solid #aeb5f9;
+                background: #eff1fe;
+            }
+
+            .quick-access-2 {
+                border: 1px solid #97dcae;
+                background: #ebf8ef;
+            }
+
+            .quick-access-3 {
+                border: 1px solid #cb8fd9;
+                background: #f5e9f8;
+            }
+        }
+    }
+
+    .table-section {
+        .ant-card-body {
+            padding: 0;
+
+            .ant-table-row {
+                &:nth-child(odd) {
+                    background-color: #eee !important;
+
+                    // .ant-table-cell-row-hover {
+                    //     background-color: #e7e7e7 !important;
+                    // }
+                }
+
+                .ant-table-cell-row-hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row, Table } from "antd";
+import { Button, Card, Col, Input, Row, Table, DatePicker } from "antd";
 import React, { useEffect, useState } from "react";
 import { SmileFilled } from "@ant-design/icons";
 import QuickAccess from "./QuickAccess";
@@ -7,9 +7,19 @@ import { ReactComponent as Arrow } from "../../assets/images/homepage/content/Ch
 import { ReactComponent as Swap } from "../../assets/images/homepage/content/swap-icon.svg";
 import { ReactComponent as Up } from "../../assets/images/homepage/content/up-arrow.svg";
 import { ReactComponent as Down } from "../../assets/images/homepage/content/down-arrow.svg";
+import { ReactComponent as Calender } from "../../assets/images/homepage/content/Calendar - Dates (1).svg";
 
 const Content = () => {
     const [isLoading, setIsLoading] = useState(false);
+
+    const [data, setData] = useState([
+        {
+            name: "",
+            title: "",
+            phoneNumber: "",
+            date: "",
+        },
+    ]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -17,13 +27,23 @@ const Content = () => {
         }, 1000);
     }, []);
 
+    const handleInputChange = (e, key, column) => {
+        const newData = [...data];
+        const index = newData.findIndex((item) => key === item.key);
+        if (index > -1) {
+            const item = newData[index];
+            newData.splice(index, 1, { ...item, [column]: e.target.value });
+            setData(newData);
+        }
+    };
+
     const columns = [
         {
             title: "",
             dataIndex: "profile-img",
             key: "profileImg",
-            render: (_, record) => record.profileImg,
             width: "10.1%",
+            render: (_, record, index) => index !== 0 && record.profileImg,
         },
         {
             title: (
@@ -33,7 +53,18 @@ const Content = () => {
             ),
             dataIndex: "name",
             key: "name",
-            width: "23.82%",
+            width: "27%",
+            render: (text, record, index) =>
+                index === 0 ? (
+                    <Input
+                        value={record.address}
+                        onChange={(e) =>
+                            handleInputChange(e, record.key, "name")
+                        }
+                    />
+                ) : (
+                    text
+                ),
         },
         {
             title: (
@@ -44,6 +75,17 @@ const Content = () => {
             dataIndex: "title",
             key: "title",
             width: "19.67%",
+            render: (text, record, index) =>
+                index === 0 ? (
+                    <Input
+                        value={record.address}
+                        onChange={(e) =>
+                            handleInputChange(e, record.key, "title")
+                        }
+                    />
+                ) : (
+                    text
+                ),
         },
         {
             title: (
@@ -54,6 +96,17 @@ const Content = () => {
             dataIndex: "phoneNumber",
             key: "phoneNumber",
             width: "21.08%",
+            render: (text, record, index) =>
+                index === 0 ? (
+                    <Input
+                        value={record.address}
+                        onChange={(e) =>
+                            handleInputChange(e, record.key, "phoneNumber")
+                        }
+                    />
+                ) : (
+                    text
+                ),
         },
         {
             title: (
@@ -63,44 +116,57 @@ const Content = () => {
             ),
             dataIndex: "date",
             key: "date",
-            width: "14.08%",
+            width: "14.15%",
+            render: (text, record, index) =>
+                index === 0 ? (
+                    <DatePicker
+                        placeholder="انتخاب تاریخ"
+                        suffixIcon={<Calender />}
+                    />
+                ) : (
+                    text
+                ),
         },
         {
             title: "",
             dataIndex: "details",
             key: "details",
-            render: (_, record) => (
-                <Button
-                    type="text"
-                    icon={<Arrow />}
-                    iconPosition={"end"}
-                    className="details-btn"
-                >
-                    {record.details}
-                </Button>
-            ),
+            render: (_, record, index) => {
+                if (index !== 0) {
+                    return (
+                        <Button
+                            type="text"
+                            icon={<Arrow />}
+                            iconPosition={"end"}
+                            className="details-btn"
+                        >
+                            {record.details}
+                        </Button>
+                    );
+                }
+            },
         },
     ];
 
-    const dataSource = Array(9)
+    const dataSource = Array(10)
         .fill(0)
         .map((_, index) => {
             if (index % 2) {
                 return {
-                    key: 2,
+                    key: index,
                     profileImg: <div className="gray-circle"></div>,
-                    name: "رستوران البرز",
-                    title: "سالن کار",
+                    name: "چلوگباب رفتاری (شعبه سعادت آباد)",
+                    title: "آشپز",
                     phoneNumber: "09120148529",
                     date: "1402/09/09",
                     details: "جزئیات",
                 };
             } else {
                 return {
-                    key: 1,
+                    key: index,
                     profileImg: <div className="gray-circle"></div>,
-                    name: "چلوگباب رفتاری (شعبه سعادت آباد)",
-                    title: "آشپز",
+                    name: "رستوران البرز",
+                    title: "سالن کار",
                     phoneNumber: "09120148529",
                     date: "1402/09/09",
                     details: "جزئیات",

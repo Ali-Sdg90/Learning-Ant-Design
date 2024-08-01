@@ -126,6 +126,27 @@
                 height: 48px !important;
             }
 
+            .ant-input {
+                width: 70%;
+                border-color: #707070 !important;
+            }
+
+            .ant-picker {
+                border-color: #707070 !important;
+
+                input::placeholder {
+                    color: #000;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .ant-picker-suffix {
+                    color: black;
+                }
+            }
+
             .ant-table-row {
                 height: 56px !important;
 
@@ -133,8 +154,12 @@
                     padding: 0;
                 }
 
-                &:nth-child(odd) {
+                &:nth-child(even) {
                     background-color: #eee !important;
+                }
+
+                &:nth-child(1) {
+                    background-color: #ffffff !important;
                 }
 
                 .ant-table-cell-row-hover {
@@ -145,6 +170,10 @@
             .details-btn {
                 padding: 6px 10px 6px 1px;
             }
+        }
+
+        .ant-table-content {
+            overflow: auto;
         }
 
         .ant-pagination {

@@ -18,6 +18,8 @@ import ADDropdown from "../../components/Playground/ADDropdown";
 import MyDropdown1 from "../../components/Playground/examples/MyDropdown1";
 import ADMenu from "../../components/Playground/ADMenu";
 import ADGotoHomepage from "../../components/Playground/ADGotoHomepage";
+import ADEditableTable from "../../components/Playground/examples/ADEditableTable";
+import MyDate from "../../components/Playground/examples/MyDate";
 
 const Playground = () => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
@@ -51,6 +53,8 @@ const Playground = () => {
                 <MyDropdown1 />
                 <ADMenu />
                 <ADGotoHomepage />
+                <ADEditableTable />
+                {/* <MyDate /> */}
             </ConfigProvider>
         </div>
     );

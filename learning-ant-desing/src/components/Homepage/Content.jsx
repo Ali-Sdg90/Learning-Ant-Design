@@ -1,19 +1,20 @@
-import { Card, Col, Flex, Grid, Row, Table } from "antd";
+import { Button, Card, Col, Row, Table } from "antd";
 import React, { useEffect, useState } from "react";
 import { SmileFilled } from "@ant-design/icons";
+import QuickAccess from "./QuickAccess";
 
-import { ReactComponent as Cutlery } from "../../assets/images/homepage/content/cutlery 2 (1).svg";
-import { ReactComponent as Note } from "../../assets/images/homepage/content/Note - Text (2).svg";
-import { ReactComponent as Hat } from "../../assets/images/homepage/content/chef's hat (1).svg";
 import { ReactComponent as Arrow } from "../../assets/images/homepage/content/Chevron - Left.svg";
+import { ReactComponent as Swap } from "../../assets/images/homepage/content/swap-icon.svg";
+import { ReactComponent as Up } from "../../assets/images/homepage/content/up-arrow.svg";
+import { ReactComponent as Down } from "../../assets/images/homepage/content/down-arrow.svg";
 
 const Content = () => {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 3000);
+        }, 1000);
     }, []);
 
     const columns = [
@@ -21,29 +22,64 @@ const Content = () => {
             title: "",
             dataIndex: "profile-img",
             key: "profileImg",
+            render: (_, record) => record.profileImg,
+            width: "10.1%",
         },
         {
-            title: "نام مجموعه",
+            title: (
+                <Button type="text" icon={<Swap />}>
+                    نام مجموعه
+                </Button>
+            ),
             dataIndex: "name",
             key: "name",
-            icon: <SmileFilled />,
+            width: "23.82%",
         },
         {
-            title: "عنوان آگهی",
+            title: (
+                <Button type="text" icon={<Swap />}>
+                    عنوان آگهی
+                </Button>
+            ),
             dataIndex: "title",
             key: "title",
+            width: "19.67%",
         },
         {
-            title: "شماره تماس",
+            title: (
+                <Button type="text" icon={<Swap />}>
+                    شماره تماس
+                </Button>
+            ),
             dataIndex: "phoneNumber",
             key: "phoneNumber",
+            width: "21.08%",
         },
         {
-            title: "تاریخ ثبت",
+            title: (
+                <Button type="text" icon={<Swap />}>
+                    تاریخ ثبت
+                </Button>
+            ),
             dataIndex: "date",
             key: "date",
+            width: "14.08%",
         },
-        { title: "", dataIndex: "details", key: "details" },
+        {
+            title: "",
+            dataIndex: "details",
+            key: "details",
+            render: (_, record) => (
+                <Button
+                    type="text"
+                    icon={<Arrow />}
+                    iconPosition={"end"}
+                    className="details-btn"
+                >
+                    {record.details}
+                </Button>
+            ),
+        },
     ];
 
     const dataSource = Array(9)
@@ -52,7 +88,7 @@ const Content = () => {
             if (index % 2) {
                 return {
                     key: 2,
-                    profileImg: "",
+                    profileImg: <div className="gray-circle"></div>,
                     name: "رستوران البرز",
                     title: "سالن کار",
                     phoneNumber: "09120148529",
@@ -74,106 +110,19 @@ const Content = () => {
 
     return (
         <Row gutter={[24, 24]} className="content">
-            <Col span={24} className="quick-access-section">
-                <Card title="دسترسی سریع">
-                    <Row gutter={[23, 23]}>
-                        <Col span={8}>
-                            <Card className="quick-access-1 quick-access-btns">
-                                <Row>
-                                    <Col span={5}>
-                                        <Flex justify="center" align="center">
-                                            <Cutlery />
-                                        </Flex>
-                                    </Col>
-
-                                    <Col span={17}>
-                                        <Flex vertical>
-                                            <div className="btn-title">
-                                                مجموعه‌های جدید
-                                            </div>
-                                            <div className="btn-amount">
-                                                18 مجموعه جدید
-                                            </div>
-                                        </Flex>
-                                    </Col>
-
-                                    <Col span={2}>
-                                        <Flex justify="center" align="center">
-                                            <Arrow />
-                                        </Flex>
-                                    </Col>
-                                </Row>
-                            </Card>
-                        </Col>
-
-                        <Col span={8}>
-                            <Card className="quick-access-2 quick-access-btns">
-                                <Row>
-                                    <Col span={5}>
-                                        <Flex justify="center" align="center">
-                                            <Note />
-                                        </Flex>
-                                    </Col>
-
-                                    <Col span={17}>
-                                        <Flex vertical>
-                                            <div className="btn-title">
-                                                آگهی‌های جدید
-                                            </div>
-                                            <div className="btn-amount">
-                                                5 آگهی جدید
-                                            </div>
-                                        </Flex>
-                                    </Col>
-
-                                    <Col span={2}>
-                                        <Flex justify="center" align="center">
-                                            <Arrow />
-                                        </Flex>
-                                    </Col>
-                                </Row>
-                            </Card>
-                        </Col>
-
-                        <Col span={8}>
-                            <Card className="quick-access-3 quick-access-btns">
-                                <Row>
-                                    <Col span={5}>
-                                        <Flex justify="center" align="center">
-                                            <Hat />
-                                        </Flex>
-                                    </Col>
-
-                                    <Col span={17}>
-                                        <Flex vertical>
-                                            <div className="btn-title">
-                                                کارجوهای جدید
-                                            </div>
-                                            <div className="btn-amount">
-                                                7 کارجوی جدید
-                                            </div>
-                                        </Flex>
-                                    </Col>
-
-                                    <Col span={2}>
-                                        <Flex justify="center" align="center">
-                                            <Arrow />
-                                        </Flex>
-                                    </Col>
-                                </Row>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Card>
-            </Col>
+            <QuickAccess />
 
             <Col span={24} className="table-section">
                 <Card title="لیست آگهی جدید">
                     <Table
-                        // loading={isLoading}
-                        dataSource={dataSource}
-                        columns={columns}
-                        pagination={{ defaultCurrent: 1, total: 50 }}
+                        loading={isLoading}
+                        dataSource={!isLoading && dataSource}
+                        columns={!isLoading && columns}
+                        pagination={{
+                            defaultCurrent: 1,
+                            total: 50,
+                            showLessItems: true,
+                        }}
                     />
                 </Card>
             </Col>

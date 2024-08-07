@@ -20,6 +20,7 @@ import ADMenu from "../../components/Playground/ADMenu";
 import ADGotoHomepage from "../../components/Playground/ADGotoHomepage";
 import ADEditableTable from "../../components/Playground/examples/ADEditableTable";
 import MyDate from "../../components/Playground/examples/MyDate";
+import ADOTP from "../../components/Playground/ADOTP";
 
 const Playground = () => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
@@ -55,6 +56,7 @@ const Playground = () => {
                 <ADGotoHomepage />
                 <ADEditableTable />
                 {/* <MyDate /> */}
+                <ADOTP />
             </ConfigProvider>
         </div>
     );
